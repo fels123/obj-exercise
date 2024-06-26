@@ -66,16 +66,31 @@
 
 //Blog post object*****
 
-const blog = {
-  title: "a",
-  body: "b",
-  author: "c",
-  views: 4,
-  comments: [
-    { author: "d", body: "f" },
-    { body: "e", body: "g" },
-  ],
-  isLive: "true",
-};
+// const blog = {
+//   title: "a",
+//   body: "b",
+//   author: "c",
+//   views: 4,
+//   comments: [
+//     { author: "d", body: "f" },
+//     { body: "e", body: "g" },
+//   ],
+//   isLive: "true",
+// };
 
-console.log(blog);
+// console.log(blog);
+
+//###########Constructor funtion to create a blog
+
+let post = new Post("a", "b", "c");
+
+console.log(post);
+
+function Post(title, body, author) {
+  this.title = title;
+  this.body = body;
+  this.author = author;
+  this.view = 0;
+  this.comment = []; //empty array
+  this.islive = false;
+}
